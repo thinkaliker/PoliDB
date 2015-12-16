@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
 
   if ((localStorage.getItem("current") == "rep") || (window.location.hash == "#rep")) {
