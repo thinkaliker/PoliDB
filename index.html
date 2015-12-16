@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>PoliDB | Political Database</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue_grey-blue.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="polidb.css">
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="polidb.js"></script>
+
+</head>
+
+<body>
+  <div class="mdl-layout__container mdl-js-layout mdl-layout--fixed-header">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title"><img src="polidb_white.png" height="36px;"></span>
+        </div>
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+          <a href="#dem" id="dembtn" class="mdl-layout__tab is-active">Democrats</a>
+          <a href="#rep" id="repbtn" class="mdl-layout__tab">Republicans</a>
+          <a href="#other" id="othbtn" class="mdl-layout__tab">Third Party</a>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title"><img src="polidb.png" height="40px;"></span>
+        <nav class="mdl-navigation">
+          <a href="#" class="mdl-navigation__link">Home</a>
+          <a href="#" class="mdl-navigation__link">Switch elections</a>
+        </nav>
+      </div>
+
+
+      <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active" id="dem">
+          <div class="page-content">
+            <!-- Your content goes here -->
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--12-col">
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                  <thead>
+                    <tr>
+                      <th>
+                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select" for="table-header">
+                          <input type="checkbox" id="table-header" class="mdl-checkbox__input" />
+                        </label>
+                      </th>
+                      <th class="mdl-data-table__cell--non-numeric">Candidate</th>
+                      <th>Has Hair</th>
+                      <th>Supports potato farming</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select" for="row[1]">
+                          <input type="checkbox" id="row[1]" class="mdl-checkbox__input" />
+                        </label>
+                      </td>
+                      <td class="mdl-data-table__cell--non-numeric">John Smith</td>
+                      <td><span class="material-icons">close</span>
+                      </td>
+                      <td><span class="material-icons">close</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select" for="row[2]">
+                          <input type="checkbox" id="row[2]" class="mdl-checkbox__input" />
+                        </label>
+                      </td>
+                      <td class="mdl-data-table__cell--non-numeric">Mary Johnson</td>
+                      <td><span class="material-icons">check</span>
+                      </td>
+                      <td><span class="material-icons">close</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select" for="row[3]">
+                          <input type="checkbox" id="row[3]" class="mdl-checkbox__input" />
+                        </label>
+                      </td>
+                      <td class="mdl-data-table__cell--non-numeric">Dan the Man</td>
+                      <td><span class="material-icons">check</span>
+                      </td>
+                      <td><span class="material-icons">check</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="rep">
+          <div class="page-content">
+            <!-- Your content goes here -->
+          </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="other">
+          <div class="page-content">
+            <!-- Your content goes here -->
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="fab">
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--raised" id="popup">
+        <div class="icon material-icons">playlist_add_check</div>
+      </button>
+      <div class="mdl-tooltip" for="popup">Compare Candidates</div>
+    </div>
+  </div>
+</body>
+
+</html>
