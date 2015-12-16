@@ -27,21 +27,18 @@ $(document).ready(function() {
     setInterval(function() {
 
       if ($("#dem").hasClass("is-active")) {
-        $("header").addClass("dem");
-        $("header").removeClass("rep");
-        $("header").removeClass("oth");
+        $("header").addClass("dem").removeClass("rep").removeClass("oth");
+        $(".mdl-layout__tab-bar").addClass("dem").removeClass("rep").removeClass("oth");
         localStorage.setItem("current", "dem");
         window.location.hash = "#dem";
       } else if ($("#rep").hasClass("is-active")) {
-        $("header").addClass("rep");
-        $("header").removeClass("dem");
-        $("header").removeClass("oth");
+        $("header").addClass("rep").removeClass("dem").removeClass("oth");
+        $(".mdl-layout__tab-bar").addClass("rep").removeClass("dem").removeClass("oth");
         localStorage.setItem("current", "rep");
         window.location.hash = "#rep";
       } else if ($("#other").hasClass("is-active")) {
-        $("header").addClass("oth");
-        $("header").removeClass("dem");
-        $("header").removeClass("rep");
+        $("header").addClass("oth").removeClass("dem").removeClass("rep");
+        $(".mdl-layout__tab-bar").addClass("oth").removeClass("dem").removeClass("rep");
         localStorage.setItem("current", "other");
         window.location.hash = "#other";
       } else {
